@@ -15,7 +15,7 @@ import {
 
 const HeroNavbar = () => {
   return (
-    <header className="justify-between h-[4rem]  items-center px-4 sticky w-full bg-white text-black  lg:flex z-10 border border-b-2">
+    <header className="justify-between h-[4rem]  items-center px-4 sticky top-0 w-full bg-white text-black  lg:flex z-10 border border-b-2">
       <figure className="">
         <Image
           src=""
@@ -67,11 +67,11 @@ const HeroNavbar = () => {
         </ul>
       </nav>
       <div className="flex items-center gap-x-2">
-        <Button asChild className="bg-white text-black hover:text-white">
-          <Link href="/login">Sign In</Link>
+        <Button asChild variant="primary">
+          <Link href="/login">Login</Link>
         </Button>
-        <Button asChild className="bg-transparent text-white">
-          <Link href="/register">Sign Up</Link>
+        <Button asChild variant="outline" className="">
+          <Link href="/register">Register</Link>
         </Button>
       </div>
     </header>

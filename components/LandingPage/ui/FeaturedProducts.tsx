@@ -4,7 +4,6 @@ import React from "react";
 
 import Autoplay from "embla-carousel-autoplay";
 
-import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -16,13 +15,13 @@ import ProductCard from "@/components/ProductCard";
 
 const FeaturedProducts = () => {
   return (
-    <article className="h-screen">
-      <h1 className="text-2xl md:text-3xl font-extrabold pl-4 ">Featured Products</h1>
+    <article className="">
+      <h1 className="text-2xl md:text-4xl font-extrabold w-full text-center text-purple-700">Featured Products</h1>
       <Carousel
         opts={{
           align: "start",
         }}
-        className="max-w-xs md:max-w-[760px]   xl:max-w-[1200px] mt-4 lg:mt-8  relative"
+        className="max-w-xs md:max-w-[760px]   xl:max-w-[1200px] mt-4 lg:mt-[4rem]  relative"
         plugins={[
           Autoplay({
             delay: 3000,
