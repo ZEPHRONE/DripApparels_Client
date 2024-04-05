@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,14 +9,20 @@ import {
   MenubarContent,
   MenubarItem,
   MenubarMenu,
-  MenubarSeparator,
-  MenubarShortcut,
   MenubarTrigger,
 } from "@/components/ui/menubar";
+import { usePathname } from "next/navigation";
 
-const HeroNavbar = () => {
+const Navbar = () => {
+  const pathname = usePathname();
   return (
-    <header className="justify-between h-[4rem]  items-center px-4 sticky top-0 w-full bg-white text-black  lg:flex z-10 border border-b-2">
+    <header
+      className={
+        pathname === "/login" || pathname === "/register"
+          ? "hidden"
+          : "justify-between h-[4rem]  items-center px-4 sticky top-0 w-full bg-white text-black lg:flex z-10 border border-b-2"
+      }
+    >
       <figure className="">
         <Image
           src=""
@@ -40,7 +47,9 @@ const HeroNavbar = () => {
           <li className=" border-white border-2 hover:border-b-2 hover:border-r-2 hover:border-b-[#666666] hover:border-r-[#666666] rounded-md transition-all hover:shadow-xl">
             <Menubar className="hover:bg-white border-0 text-sm">
               <MenubarMenu>
-                <MenubarTrigger>Products</MenubarTrigger>
+                <MenubarTrigger>
+                  <Link href="/products">Products</Link>
+                </MenubarTrigger>
                 <MenubarContent className="hidden"></MenubarContent>
               </MenubarMenu>
             </Menubar>
@@ -78,4 +87,4 @@ const HeroNavbar = () => {
   );
 };
 
-export default HeroNavbar;
+export default Navbar;

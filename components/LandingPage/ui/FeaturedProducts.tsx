@@ -28,10 +28,10 @@ const FeaturedProducts = () => {
           }),
         ]}
       >
-        <CarouselContent className="-ml-1 -mr-1">
+        <CarouselContent className="-ml-1 -mr-1 py-4">
           {Array.from({ length: 10 }).map((_, index) => (
             <CarouselItem key={index} className="md:basis-1/2 xl:basis-1/3">
-              <ProductCard />
+              <ProductCard id="1000" price={1000} name="Rick and Morty: Higher Self (Acid Wash)" />
             </CarouselItem>
           ))}
         </CarouselContent>
