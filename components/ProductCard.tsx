@@ -19,10 +19,9 @@ const ProductCard = ({ id, name, price }: ProductsProps) => {
   return (
     <Card className="w-[300px] lg:w-[350px] relative">
       <div className="flex right-6 top-6">
-        <Heart
-          className="text-red-600 text-md absolute -right-4 -top-4 z-10 border border-red-600 rounded-full p-2 cursor-pointer"
+        <ShoppingCart
+          className="text-purple-700 text-md absolute -right-4 -top-4  border hover:border-purple-600 hover:fill-purple-500 rounded-full p-2 cursor-pointer"
           size={40}
-          fill="red"
         />
         {/* <ShoppingCart className="" /> */}
       </div>
@@ -30,6 +29,7 @@ const ProductCard = ({ id, name, price }: ProductsProps) => {
         <Image
           src={productImage}
           alt="image"
+          loading="lazy"
           width={1000}
           height={1000}
           className="w-[300px] h-[375px]"
